@@ -1,0 +1,124 @@
+.features {
+  background-image: url("../../../assets/blob-bg.svg"),
+    url("../../../assets/blob-bg-2.svg");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  display: flex;
+  width: 100%;
+  padding: 50px 2%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f4fd;
+}
+.features-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section__underline {
+  width: 20%;
+  border: #4759f5 2px solid;
+}
+.features-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.feature-media {
+  width: 100%;
+  border-radius: 100px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.feature-media__img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height: 100%;
+}
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.feature-title {
+  font-family: "Rubik";
+}
+.feature-title__content {
+}
+
+.feature-point-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.feature-point__icon {
+  color: #3548f8;
+  margin-right: 10px;
+  padding: 5px;
+  border: #3548f8 1 px solid;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-point__content {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: rgb(80, 80, 80);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@media only screen and (min-width: 650px) {
+  .features-heading {
+    margin-bottom: 50px;
+  }
+  .feature-container {
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 0 10%;
+  }
+  .section__underline {
+    width: 50px;
+    border: #4759f5 2px solid;
+  }
+  .feature-container {
+    margin-bottom: 50px;
+  }
+  .feature-container.feature-container--even {
+    flex-direction: row-reverse;
+  }
+  .feature-container.feature-container--even .feature-point-container {
+    padding-left: 15%;
+  }
+
+  .feature-media {
+    min-width: 40%;
+    width: 40%;
+    height: 250px;
+    margin-right: 10px;
+  }
+  .feature-media__img {
+    height: 100%;
+  }
+  .feature-content {
+    justify-content: flex-start;
+  }
+  .feature-points {
+    width: 100%;
+  }
+}

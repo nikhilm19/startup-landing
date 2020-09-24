@@ -1,0 +1,93 @@
+.why-us {
+  display: flex;
+  padding: 0 5%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.why-us-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.why-us-heading__title {
+  font-family: "Rubik";
+}
+
+.why-us-content-container,
+.why-us-content,
+.why-us-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.why-us-media__img-container,
+.why-us-media__img-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.why-us-points {
+  margin-top: 20px;
+}
+.why-us-point__container {
+  display: flex;
+  flex-direction: row;
+}
+.why-us-point__icon {
+  margin-right: 20px;
+  width: min-content;
+  padding: 10px;
+  border: 2px solid #4759f5;
+  border-radius: 100%;
+  transition: all 0.3s ease-in;
+  height: min-content;
+}
+.why-us-point__icon:hover {
+  background-color: #4759f5;
+  color: white;
+  border-color: #4759f5;
+}
+.why-us-point__icon:hover + .why-us-point-text-container h4 {
+  color: #4759f5;
+}
+.why-us-point__text-content h4 {
+  margin-bottom: 0px;
+  font-family: "Raleway";
+  font-weight: bold;
+  color: gray;
+}
+.why-us-point__text-content h4:hover {
+  color: #4759f5;
+}
+
+@media only screen and (min-width: 650px) {
+  .why-us {
+    justify-content: center;
+    align-items: center;
+  }
+  .why-us-container {
+    width: 90%;
+    box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+    margin: 20px 0px;
+    padding: 20px 20px;
+    border-radius: 10px;
+  }
+  .why-us-content {
+    flex-direction: row;
+  }
+  .why-us-media {
+    width: 50%;
+    margin-right: 20px;
+  }
+  .why-us-point__text-content h4 {
+    font-size: 20px;
+  }
+}

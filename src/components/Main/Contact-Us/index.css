@@ -1,0 +1,137 @@
+.contacts {
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  display: flex;
+  width: 100%;
+  padding: 50px 2%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f4fd;
+}
+.contacts-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section__underline {
+  width: 20%;
+  border: #4759f5 2px solid;
+}
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.contact-media {
+  width: min-content;
+  border-radius: 100px;
+
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border: solid 1px #4759f5;
+  height: min-content;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.contact-media:hover {
+  background-color: #4759f5;
+}
+.contact-media:hover i {
+  color: white;
+}
+.contact-media__img {
+  width: 100%;
+
+  border-radius: 20px;
+  height: 100%;
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contact-title {
+  font-family: "Rubik";
+}
+.contact-title__content {
+  font-weight: bold;
+}
+
+.contact-point-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.contact-point__icon {
+  color: #3548f8;
+  margin-right: 10px;
+  padding: 5px;
+  border: #3548f8 1 px solid;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-point__content {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: rgb(80, 80, 80);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@media only screen and (min-width: 650px) {
+  .contacts-heading {
+    margin-bottom: 50px;
+  }
+  .contact-container {
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 0 10%;
+  }
+  .section__underline {
+    width: 50px;
+    border: #4759f5 2px solid;
+  }
+  .contact-container {
+    margin-bottom: 50px;
+  }
+  .contact-container.contact-container--even {
+    flex-direction: row-reverse;
+  }
+  .contact-container.contact-container--even .contact-point-container {
+    padding-left: 15%;
+  }
+
+  .contact-media {
+    min-width: 40%;
+    width: 40%;
+    height: 250px;
+    margin-right: 10px;
+  }
+  .contact-media__img {
+    height: 100%;
+  }
+  .contact-content {
+    justify-content: flex-start;
+  }
+  .contact-points {
+    width: 100%;
+  }
+}
