@@ -18,15 +18,18 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.section__underline {
-  width: 20%;
-  border: #4759f5 2px solid;
+.contacts-info-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 10px;
 }
+
 .contacts-content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 5%;
+  /* padding: 0 5%; */
 }
 
 .contact-container {
@@ -37,9 +40,9 @@
 .contact-media {
   width: min-content;
   border-radius: 100px;
-
+  background-color: #4759f5;
   margin-bottom: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
   border: solid 1px #4759f5;
   height: min-content;
   padding: 10px;
@@ -47,12 +50,13 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  color: white;
 }
 .contact-media:hover {
-  background-color: #4759f5;
+  background-color: transparent;
 }
 .contact-media:hover i {
-  color: white;
+  color: #4759f5;
 }
 .contact-media__img {
   width: 100%;
@@ -72,6 +76,11 @@
 }
 .contact-title__content {
   font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.contact-text__content {
+  font-size: 15px;
 }
 
 .contact-point-container {
@@ -83,7 +92,7 @@
   color: #3548f8;
   margin-right: 10px;
   padding: 5px;
-  border: #3548f8 1 px solid;
+  border: #3548f8 1px solid;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -96,42 +105,97 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
-@media only screen and (min-width: 650px) {
+.contacts-form,
+.contacts-form-content,
+.contacts-form-container,
+.email-container,
+.submit-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.contacts-form {
+  /* padding: 0 5%; */
+}
+.names-container,
+.email-container,
+.message-container,
+.submit-btn-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.names-container div {
+  width: 50%;
+}
+.first-name__content,
+.last-name__content,
+.email__content,
+.message__content,
+.submit-btn__content {
+  width: 100%;
+  border: solid 1px gainsboro;
+  border-radius: 15px;
+
+  padding: 5px 10px;
+}
+.submit-btn__content {
+  background-color: #4759f5;
+  color: #fff;
+  padding: 5px 0;
+}
+input::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 992px) {
   .contacts-heading {
     margin-bottom: 50px;
   }
+  .contacts-info-container {
+    flex-direction: row;
+
+    width: 70%;
+  }
+  .contacts-content,
+  .contacts-form {
+    width: 50%;
+    justify-content: space-around;
+  }
+
   .contact-container {
     flex-direction: row;
     margin-bottom: 10px;
-    padding: 0 10%;
-  }
-  .section__underline {
-    width: 50px;
-    border: #4759f5 2px solid;
-  }
-  .contact-container {
-    margin-bottom: 50px;
-  }
-  .contact-container.contact-container--even {
-    flex-direction: row-reverse;
-  }
-  .contact-container.contact-container--even .contact-point-container {
-    padding-left: 15%;
+
+    width: 100%;
+    justify-content: center;
   }
 
   .contact-media {
-    min-width: 40%;
-    width: 40%;
-    height: 250px;
     margin-right: 10px;
   }
   .contact-media__img {
-    height: 100%;
   }
   .contact-content {
     justify-content: flex-start;
   }
   .contact-points {
     width: 100%;
+  }
+  .first-name-container {
+    margin-right: 10px;
+  }
+  .first-name__content,
+  .last-name__content,
+  .email__content,
+  .message__content,
+  .submit-btn__content {
+    padding: 8px 20px;
   }
 }

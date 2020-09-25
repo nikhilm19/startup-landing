@@ -29,6 +29,7 @@
 
   margin-bottom: 30px;
   transition: all 0.2s ease-in;
+  transition-delay: 0.3s;
   padding: 0 10px;
   border-radius: 10px;
   border: none;
@@ -37,6 +38,7 @@
   transform: scale(1.1, 1.1);
 
   box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+  /* border-top: 1px solid blue; */
 }
 .service-container:hover .service-media__img path,
 .service-container:hover .service-title__content {
@@ -125,8 +127,23 @@
 .service-point__text-content h4:hover {
   color: #4759f5;
 }
+@media only screen and (min-width: 600px) {
+  .services-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .service-container {
+    width: 30%;
+    margin-right: 15px;
+  }
+  /* .service-container:first-child {
+    margin-left: 20px;
+  } */
+}
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 768px) {
   .service {
     justify-content: center;
     align-items: center;
