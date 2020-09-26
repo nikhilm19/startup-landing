@@ -1,3 +1,11 @@
+@import "variables";
+@import "mixins";
+
+@include fade("inDown", 4);
+
+@include fade("inDown", 5);
+
+@include fade("inDown", 6);
 .services {
   display: flex;
   width: 100%;

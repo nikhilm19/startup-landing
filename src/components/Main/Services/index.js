@@ -5,8 +5,10 @@ import img2 from "../../../assets/bib.gif";
 import img3 from "../../../assets/Bibliophile.gif";
 import img4 from "../../../assets/data-report.gif";
 import { ReactComponent as ReactLogo } from "../../../assets/blob-icon.svg";
+import { Fade } from "react-reveal";
 
-import "./index.css";
+import onChange from "../../Reusable/visiblilityOnChange";
+import VisibilitySensor from "react-visibility-sensor";
 
 const data = [
   {
@@ -48,18 +50,23 @@ const data = [
 function Services() {
   return (
     <>
-      <section className="services" id="services">
-        <div className="services-container">
-          <div className="services-heading">
-            <h1 className="services-heading__title">Services</h1>
-            <span className="section__underline"></span>
-          </div>
-          <div className="services-content">
-            {data.map((service, i) => {
-              const even = i % 2 === 0 ? "even" : "odd";
-              return (
-                <>
-                  <div className={`service-container `}>
+      <VisibilitySensor
+        partialVisibility
+        onChange={(isVisible) => {
+          onChange(isVisible, "services", "fadeInLeft");
+        }}
+      >
+        <section className="services" id="services">
+          <div className="services-container">
+            <div className="services-heading">
+              <h1 className="services-heading__title">Services</h1>
+              <span className="section__underline"></span>
+            </div>
+            <div className="services-content">
+              {data.map((service, i) => {
+                const even = i % 2 === 0 ? "even" : "odd";
+                return (
+                  <div className={`service-container fadeinDown-${i}`}>
                     <div className="service-media">
                       <ReactLogo className="service-media__img" />
                       <i className="fa fa-calculator fa-2x"></i>
@@ -75,12 +82,12 @@ function Services() {
                       </div>
                     </div>
                   </div>
-                </>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </VisibilitySensor>
     </>
   );
 }

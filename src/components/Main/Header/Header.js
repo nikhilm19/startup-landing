@@ -10,7 +10,6 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 
-import "./index.css";
 
 function Header() {
   const [isCollapsed, setCollapse] = React.useState(false);

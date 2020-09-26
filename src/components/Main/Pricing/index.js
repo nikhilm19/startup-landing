@@ -5,8 +5,9 @@ import img2 from "../../../assets/bib.gif";
 import img3 from "../../../assets/Bibliophile.gif";
 import img4 from "../../../assets/data-report.gif";
 import { ReactComponent as ReactLogo } from "../../../assets/blob-icon.svg";
-
-import "./index.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import Reveal from "react-reveal/Reveal";
+import VisibilitySensor from "react-visibility-sensor";
 
 const data = [
   {
@@ -28,10 +29,17 @@ const data = [
     caption: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
   },
 ];
+
+function onChange(onVis) {
+  console.log(onVis);
+  if (onVis) {
+    document.getElementById("pricing").classList.add("fadeinDown-1");
+  }
+}
 function Pricing() {
   return (
     <>
-      <section className="pricing" id="pricing">
+      <section className="pricing " id="pricing">
         <div className="pricing-container">
           <div className="pricing-heading">
             <h1 className="pricing-heading__title">Pricing</h1>
@@ -41,8 +49,13 @@ function Pricing() {
             {data.map((card, i) => {
               const even = i % 2 === 0 ? "even" : "odd";
               return (
-                <>
-                  <div className={`price-card-container `}>
+                <VisibilitySensor
+                  partialVisibility
+                  onChange={(isVisible) => {
+                    onChange(isVisible);
+                  }}
+                >
+                  <div className={`price-card-container fadeinDown-${i}`}>
                     {i === data.length - 1 ? (
                       <span className="advanced-ribbon">Advanced</span>
                     ) : (
@@ -55,32 +68,34 @@ function Pricing() {
                       <ReactLogo className="service-media__img" />
                       <i className="fa fa-calculator fa-2x"></i>
                     </div> */}
-                    <div className="price-labors-container">
-                      <div className="price-labors-content">
-                        <h3 className="price-labors__nos">
-                          <span className="price-labors__nos price-labors__nos--span ">
-                            {card.nos}
-                          </span>
-                          Labors
-                        </h3>
+                    <div className="price-card-main">
+                      <div className="price-labors-container">
+                        <div className="price-labors-content">
+                          <h3 className="price-labors__nos">
+                            <span className="price-labors__nos price-labors__nos--span ">
+                              {card.nos}
+                            </span>
+                            Nos
+                          </h3>
+                        </div>
                       </div>
-                    </div>
-                    <div className="price-card-text">
-                      <div className="price-text">
-                        <p>{card.caption}</p>
-                      </div>
-                      <div className="price-text">
-                        <p>{card.caption}</p>
-                      </div>
-                      <div className="price-text">
-                        <p>{card.caption}</p>
+                      <div className="price-card-text">
+                        <div className="price-text">
+                          <p>{card.caption}</p>
+                        </div>
+                        <div className="price-text">
+                          <p>{card.caption}</p>
+                        </div>
+                        <div className="price-text">
+                          <p>{card.caption}</p>
+                        </div>
                       </div>
                     </div>
                     <div className="price-buy-container">
                       <button className="price-buy">Buy Now</button>
                     </div>
                   </div>
-                </>
+                </VisibilitySensor>
               );
             })}
           </div>

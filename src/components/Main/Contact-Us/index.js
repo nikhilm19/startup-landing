@@ -6,7 +6,7 @@ import img3 from "../../../assets/Bibliophile.gif";
 import img4 from "../../../assets/data-report.gif";
 
 import { ReactComponent as ReactLogo } from "../../../assets/blob-icon.svg";
-import "./index.css";
+
 
 const data = [
   {
