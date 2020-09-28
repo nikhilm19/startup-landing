@@ -44,7 +44,7 @@
 .price-card-container:hover {
   transform: translateY(-10px);
 
-  background-color: #4759f5;
+  background-color: $bg-color;
   color: black;
   background-position: 0 -100%;
 
@@ -52,29 +52,40 @@
 
   /* border-top: 1px solid blue; */
 }
-.price-card-container:hover .price-card-main {
-  background-color: white;
-  color: black;
 
-  box-shadow: 0 5px 25px 0 rgba(8, 23, 241, 0.6);
+.price-card-container:hover {
+  .price-card-main {
+    background: $labor-font-color;
+    color: white;
 
-  /* border-top: 1px solid blue; */
-}
-.price-card-container:hover .price-card-media__img path,
-.price-card-container:hover .price-card-title__content {
-  fill: #4759f5;
-  color: #4759f5;
-}
-.price-card-container:hover .price-card-media i,
-.price-card-container:hover .price-title-container,
-.advanced-ribbon {
-  color: white;
-  background-color: #4759f5;
+    box-shadow: 0 5px 25px 0 rgba(8, 23, 241, 0.6);
+
+    /* border-top: 1px solid blue; */
+  }
+  .price-card-media__img path,
+  .price-card-title__content {
+    fill: #4759f5;
+    color: #4759f5;
+  }
+  .price-card-media i,
+  .price-title-container {
+    color: white;
+    background-color: lighten($bg-color, 10%);
+    // background-color: $btn-color;
+  }
+  .advanced-ribbon {
+    color: white;
+  }
+
+  .price-labors__nos {
+    background: $white;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .price-card-container:hover .advanced-ribbon {
-  background-color: rgb(3, 216, 216);
-  color: black;
 }
 .advanced-ribbon {
   width: 200px;
@@ -124,20 +135,29 @@
 .price-card-main {
   width: 100%;
   flex-grow: 1;
-  background-color: #4759f5;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: $black;
 }
 .price-labors__nos {
   text-align: center;
-  font-size: 18px;
+  font-size: 34px;
   font-weight: bold;
+  background: $labor-font-color;
+
+  margin-right: 5px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .price-labors__nos.price-labors__nos--span {
-  color: tomato;
+  background: $labor-font-color;
+
   margin-right: 5px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .price-text {
   font-size: 12px;
@@ -220,7 +240,7 @@
 }
 button.price-buy {
   border: none;
-  background-color: #3548f8;
+  background-color: darken($btn-color, 10%);
   color: white;
   border-radius: 5px;
   padding: 5px 20px;
@@ -228,7 +248,7 @@ button.price-buy {
   transition: all 0.5s ease;
 }
 button.price-buy:hover {
-  background-color: #4759f5;
+  background-color: $btn-color;
 }
 @media only screen and (min-width: 600px) {
   .services-content {
@@ -256,7 +276,7 @@ button.price-buy:hover {
     align-items: center;
   }
   .pricing-container {
-    box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+    // box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
 
     width: 100%;
   }

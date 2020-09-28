@@ -1,9 +1,10 @@
 .features {
-  background-image: url("../assets/blob-bg.svg"),
+  background-image: url("../assets/blob-bg.svg"), url("../assets/blob-bg-2.svg"),
+    url("../assets/blob-3.svg"), url("../assets/blob-3.svg"),
     url("../assets/blob-bg-2.svg");
-  background-position: right bottom, left top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 50% 50%, 50% 50%;
+  background-position: right bottom, 1% 1%, 1% 300px, right top, right 300px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 50% 50%, 300px 300px, 300px 300px, 300px 300px, 300px 300px;
   display: flex;
   width: 100%;
   padding: 50px 2%;
@@ -20,10 +21,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.section__underline {
-  width: 20%;
-  border: #4759f5 2px solid;
-}
+
 .features-content {
   display: flex;
   flex-direction: column;

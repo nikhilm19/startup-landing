@@ -21,7 +21,7 @@ function ControlledCarousel() {
           />
           <Carousel.Caption>
             <h3 className="caption__heading">
-              Welcome to <span className="caption__keyword">LabourNation</span>
+              Welcome to <span className="caption__keyword">XYZ</span>
             </h3>
             <button className="caption__cta">Get Started</button>
           </Carousel.Caption>

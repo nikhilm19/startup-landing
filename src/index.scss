@@ -6,6 +6,7 @@
 @import "./styles/pricing";
 @import "./styles/services";
 @import "./styles/why-us";
+@import "./styles/login.scss";
 
 body {
   margin: 0;
@@ -72,4 +73,9 @@ code {
   animation-fill-mode: both;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
+}
+
+.section__underline {
+  width: 10%;
+  border: $complementary-bg 2px solid;
 }

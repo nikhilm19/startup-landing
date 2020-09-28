@@ -8,17 +8,19 @@ import Services from "./Services";
 import WhyUs from "./Why-Us";
 import Footer from "./Footer";
 import Pricing from "./Pricing";
+import Login from "./Login";
 export default () => {
   return (
     <>
-      <Header />
-      <ControlledCarousel />
-      <Features />
-      <WhyUs />
-      <Services />
-      <Pricing />
-      <ContactUs />
-      <Footer />
+      {/* <Header />
+        <ControlledCarousel />
+        <Features />
+        <WhyUs />
+        <Services />
+        <Pricing />
+        <ContactUs />
+        <Footer /> */}
+      <Login />
     </>
   );
 };

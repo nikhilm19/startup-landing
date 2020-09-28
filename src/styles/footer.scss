@@ -1,12 +1,25 @@
+@import "./mixins";
+@import "./variables";
+
 .footer {
   display: flex;
   width: 100%;
-  padding: 50px 2%;
+  // padding: 50px 2%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #1d2464;
+  background: $bg-color;
   color: white;
+}
+.footer::before {
+  content: " ";
+  display: block;
+  background-color: white;
+  height: 200px;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+  background-image: url("../assets/wave-footer.svg");
 }
 .footer h4 {
   font-size: 15px;
@@ -55,6 +68,7 @@ div.newsletter-container {
 }
 div.social-media-container i {
   margin-bottom: 20px;
+  color: lighten($btn-color,50%);
 }
 
 .newsletter-email {

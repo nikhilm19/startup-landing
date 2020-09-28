@@ -6,26 +6,43 @@
 @include fade("inDown", 5);
 
 @include fade("inDown", 6);
+
 .services {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #f1f4fd;
+
+  background: $bg;
+}
+
+.services:after {
+  content: " ";
+  display: block;
+  background: white;
+  height: 200px;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+  background-image: url("../assets/wave.svg");
 }
 
 .services-container {
   padding-top: 20px;
 }
+
 .services-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  color: $heading-white;
 }
+
 .services-heading__title {
   font-family: "Rubik";
 }
+
 .service-container {
   display: flex;
   flex-direction: column;
@@ -42,20 +59,24 @@
   border-radius: 10px;
   border: none;
 }
+
 .service-container:hover {
   transform: scale(1.1, 1.1);
 
   box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
   /* border-top: 1px solid blue; */
 }
+
 .service-container:hover .service-media__img path,
 .service-container:hover .service-title__content {
-  fill: #4759f5;
-  color: #4759f5;
+  fill: $complementary-bg;
+  color: $complementary-bg;
 }
+
 .service-container:hover .service-media i {
   color: white;
 }
+
 .services-content-container,
 .services-content,
 .service-media {
@@ -72,12 +93,14 @@
   height: 100px;
   position: relative;
 }
+
 .service-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .service-text {
   font-size: 12px;
   width: 80%;
@@ -97,6 +120,7 @@
   right: 0;
   left: 0;
 }
+
 .service-media i {
   position: relative;
   right: 10px;
@@ -105,10 +129,12 @@
 .service-points {
   margin-top: 20px;
 }
+
 .service-point__container {
   display: flex;
   flex-direction: row;
 }
+
 .service-point__icon {
   margin-right: 20px;
   width: min-content;
@@ -118,23 +144,28 @@
   transition: all 0.3s ease-in;
   height: min-content;
 }
+
 .service-point__icon:hover {
   background-color: #4759f5;
   color: white;
   border-color: #4759f5;
 }
-.service-point__icon:hover + .service-point-text-container h4 {
+
+.service-point__icon:hover+.service-point-text-container h4 {
   color: #4759f5;
 }
+
 .service-point__text-content h4 {
   margin-bottom: 0px;
   font-family: "Raleway";
   font-weight: bold;
   color: gray;
 }
+
 .service-point__text-content h4:hover {
   color: #4759f5;
 }
+
 @media only screen and (min-width: 600px) {
   .services-content {
     flex-direction: row;
@@ -142,10 +173,12 @@
     justify-content: center;
     align-items: center;
   }
+
   .service-container {
     width: 30%;
     margin-right: 15px;
   }
+
   /* .service-container:first-child {
     margin-left: 20px;
   } */
@@ -156,11 +189,13 @@
     justify-content: center;
     align-items: center;
   }
+
   .services-container {
     box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
 
     width: 100%;
   }
+
   .service-container {
     display: flex;
     flex-direction: column;
@@ -180,24 +215,29 @@
   .services-content {
     padding: 0 10%;
   }
+
   .service-content,
   .services-content {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .service-content {
     align-items: center;
     justify-content: center;
   }
+
   .service-media {
     width: 40%;
     height: 100px;
 
     position: relative;
   }
+
   .service-media__img {
     width: 100%;
   }
+
   .service-media__img path {
     transition: all 0.2s ease-in;
     fill: #f5f5f5;

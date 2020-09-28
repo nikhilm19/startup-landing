@@ -1,15 +1,19 @@
+@import "./variables";
+@import "./mixins";
 .contacts {
   background-position: right bottom, left top;
   background-repeat: no-repeat, no-repeat;
   background-size: 50% 50%, 50% 50%;
   display: flex;
   width: 100%;
-  padding: 50px 2%;
+  // padding: 50px 2%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f1f4fd;
+  // background-color: #f1f4fd;
+  @include box-shadow($container-shadow);
 }
+
 .contacts-heading {
   width: 100%;
   display: flex;
@@ -40,10 +44,10 @@
 .contact-media {
   width: min-content;
   border-radius: 100px;
-  background-color: #4759f5;
+  background-color: $pink;
   margin-bottom: 10px;
   margin-right: 10px;
-  border: solid 1px #4759f5;
+  // border: solid 1px #4759f5;
   height: min-content;
   padding: 10px;
   display: flex;
@@ -53,10 +57,10 @@
   color: white;
 }
 .contact-media:hover {
-  background-color: transparent;
+  background-color: $bg-color;
 }
 .contact-media:hover i {
-  color: #4759f5;
+  color: $white;
 }
 .contact-media__img {
   width: 100%;
@@ -145,10 +149,15 @@
 
   padding: 5px 10px;
 }
+.submit-btn-container{
+  justify-content: center;
+}
 .submit-btn__content {
-  background-color: #4759f5;
+  background-color: $btn-color;
   color: #fff;
   padding: 5px 0;
+  width: 50%;
+
 }
 input::-webkit-input-placeholder {
   font-size: 12px;

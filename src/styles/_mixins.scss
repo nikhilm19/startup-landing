@@ -1,3 +1,12 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin box-shadow($params...) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
 @mixin fade($dir, $delay) {
   .fade#{$dir}-#{$delay} {
     animation-name: fadeInUp;
@@ -20,4 +29,23 @@
       opacity: 1;
     }
   }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
 }
