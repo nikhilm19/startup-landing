@@ -1,9 +1,12 @@
+@import "./variables";
+
 .carousel.slide {
   width: 100%;
   height: 500px;
   top: 0;
   z-index: 1;
 }
+
 .carousel.slide img {
   height: 100%;
 }
@@ -12,8 +15,9 @@
 .carousel-inner {
   height: 100%;
 }
-.carousel-item {
-}
+
+.carousel-item {}
+
 .carousel-caption {
   display: flex;
   position: absolute;
@@ -26,45 +30,53 @@
   top: 0;
   width: 80%;
   margin: 0 10%;
+  text-align: left;
 }
+
 .carousel-control-next,
 .carousel-control-prev {
   width: auto;
   margin-left: 20px;
 }
+
 .carousel-control-next {
   margin-right: 20px;
 }
+
 .caption__heading {
-  font-size: 40px;
-  font-family: "Rubik";
+  font-size: 50px;
+  font-family: "Varela Round";
 }
 
-.active.carousel-item > .carousel-caption {
+.active.carousel-item>.carousel-caption {
   display: flex;
 }
 
 .caption__keyword {
   color: red;
 }
+
 .caption__cta {
-  background-color: #3548f8;
+  background-color: $btn-color;
   outline: none;
   border: none;
-  color: white;
+  color: $btn-txt-color;
   padding: 10px 20px;
   border-radius: 20px;
   width: 80%;
   transition: all 0.2s ease-in;
 }
+
 .caption__cta:hover {
-  background-color: #4759f5;
+  background-color: $btn-hover-color;
+  color: $white;
 }
 
 @media only screen and (min-width: 650px) {
   .caption__heading {
     font-size: 50px;
-    font-family: "Rubik";
+    text-align: left;
+    // font-family: "Rubik";
   }
 
   .carousel-caption {
@@ -74,7 +86,9 @@
     right: 20%;
     width: 60%;
     align-items: flex-start;
+    text-align: left;
   }
+
   .caption__cta {
     padding: 10px 20px;
     border-radius: 20px;

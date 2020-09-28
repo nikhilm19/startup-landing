@@ -50,7 +50,7 @@
             margin-bottom: 10px;
             border-radius: 20px;
             outline: none;
-            border: 1px solid grey;
+            border: 1px solid rgb(182, 182, 182);
             background-color: rgba(206, 206, 206, 0.308);
             padding: 7px 10px;
             font-family: "Rubik";
@@ -78,7 +78,8 @@
             width: 100%;
             background-color: $btn-color;
             border: none;
-            color: $white;
+            color: lighten($btn-txt-color, 30%);
+            font-weight: bold;
             border-radius: 20px;
             padding: 8px 0px;
         }
@@ -140,10 +141,11 @@
             button {
                 padding: 5px 5px;
                 background-color: transparent;
-                border: 0.5px solid grey;
+                border: 0.5px solid rgb(182, 182, 182);
                 border-radius: 20px;
                 margin-right: 20px;
                 font-size: 0;
+
 
 
 

@@ -13,7 +13,7 @@ import AboutUs from "./About-us";
 export default () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <ControlledCarousel />
       <Features />
       <WhyUs />
@@ -22,6 +22,7 @@ export default () => {
       <ContactUs />
       <Footer />
       {/* <Login /> */}
+
       <AboutUs />
     </>
   );
