@@ -41,11 +41,6 @@ const data = [
     title: "Lorem Ipsum",
     caption: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
   },
-  {
-    img: img1,
-    title: "Lorem Ipsum",
-    caption: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
 ];
 function Services() {
   return (

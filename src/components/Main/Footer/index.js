@@ -6,7 +6,7 @@ import img3 from "../../../assets/Bibliophile.gif";
 import img4 from "../../../assets/data-report.gif";
 
 import { ReactComponent as ReactLogo } from "../../../assets/blob-icon.svg";
-
+import siteMeta from "../../../site-meta";
 
 function Footer() {
   return (
@@ -21,7 +21,7 @@ function Footer() {
             <div className="brand-info-container">
               <div className="brand-info-content">
                 <div className="brand-title-container">
-                  <h4 className="brand-title__content">LaborNation</h4>
+                  <h4 className="brand-title__content">{siteMeta.siteName}</h4>
                 </div>
                 <div className="brand-location-container">
                   <p className="brand-location__content">

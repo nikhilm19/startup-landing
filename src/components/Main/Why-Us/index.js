@@ -1,10 +1,9 @@
 import React from "react";
 import logo from "../../../logo.jpg";
-import img1 from "../../../assets/labor-person.jpg";
+import img1 from "../../../assets/why-us.svg";
 import img2 from "../../../assets/bib.gif";
 import img3 from "../../../assets/Bibliophile.gif";
 import img4 from "../../../assets/data-report.gif";
-
 
 const data = [
   {

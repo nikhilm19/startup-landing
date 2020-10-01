@@ -8,8 +8,7 @@
 @import "./styles/why-us";
 @import "./styles/login.scss";
 @import "./styles/about-us.scss";
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 body {
   margin: 0;
@@ -50,7 +49,8 @@ code {
 
 @keyframes fadeInLeft {
   from {
-    transform: translate3d(-80px, 0, 0);
+    opacity: 0;
+    transform: translate3d(-120px, 0, 0);
   }
 
   to {
@@ -59,10 +59,10 @@ code {
   }
 }
 
-
 @keyframes fadeInRight {
   from {
-    transform: translate3d(80px, 0px, 0);
+    transform: translate3d(120px, 0px, 0);
+    opacity: 0;
   }
 
   to {
@@ -94,4 +94,26 @@ code {
 .section__underline {
   width: 10%;
   border: $complementary-bg 2px solid;
+  background-color: $complementary-bg;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  20% {
+    transform: scaleY(0.2);
+  }
+  40% {
+    transform: scaleY(0.4);
+  }
+  60% {
+    transform: scaleY(0.6);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }

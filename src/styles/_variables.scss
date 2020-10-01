@@ -1,8 +1,8 @@
 $bg-color: #4e2aa5;
 $complementary-bg: lighten(adjust-hue($bg-color, -90deg), 20%);
-$btn-color: #02E088;
-$btn-hover-color:#5D55FA;
-$btn-dark-color:#261F7D;
+$btn-color: #02e088;
+$btn-hover-color: #5d55fa;
+$btn-dark-color: #261f7d;
 $btn-txt-color: #1b145d;
 $heading-white: #fff;
 $bg: linear-gradient(268deg, #4e2aa5, #582080);
@@ -10,13 +10,14 @@ $white: #fff;
 $black: #000;
 $labor-font-color: linear-gradient(104deg, #f400fa, #601c91);
 $pink: #d126a9;
-$yellow:#FFBF01;
+$yellow: #ffbf01;
 
 $container-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
 
 $smooth-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-0 12.5px 10px rgba(0, 0, 0, 0.06),
-0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-0 10px 50px rgba(0, 0, 0, 0.12);
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 10px 50px rgba(0, 0, 0, 0.12);
+
+$navbar-height: 70px;
+$light-pink: #faebff;

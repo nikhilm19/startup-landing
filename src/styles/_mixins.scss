@@ -12,9 +12,9 @@ $desktop-width: 1024px;
     animation-name: fadeInUp;
 
     animation-duration: 1s;
-    animation-delay: #{$delay}s;
+    animation-delay: #{$delay * 0.2}s;
     animation-fill-mode: both;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both;
   }
 
