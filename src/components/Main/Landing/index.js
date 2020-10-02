@@ -7,15 +7,19 @@ import Services from "../Services";
 import WhyUs from "../Why-Us";
 
 import Pricing from "../Pricing";
+import Layout from "../Layout";
 
 export default () => {
   return (
     <>
-      <Features />
-      <WhyUs />
-      <Services />
-      <Pricing />
-      <ContactUs />
+      <Layout>
+        <ControlledCarousel />
+        <Features />
+        <WhyUs />
+        <Services />
+        <Pricing />
+        <ContactUs />
+      </Layout>
     </>
   );
 };

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Carousel, CarouselItem } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
-import logo from "../../../logo.svg";
-import Zoom from "react-reveal/Zoom";
+import img2 from "../../../assets/gradient-bg.jpg";
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
 
@@ -13,11 +12,7 @@ function ControlledCarousel() {
   return (
     <Carousel interval={null}>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/468x60?text=Visit+Blogging.com+No"
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={img2} alt="Second slide" />
         <Carousel.Caption>
           <h3 className="caption__heading">
             Welcome to <span className="caption__keyword">XYZ</span>
@@ -26,11 +21,7 @@ function ControlledCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/468x60?text=Visit+Blogging.com+No"
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={img2} alt="Second slide" />
 
         <Carousel.Caption>
           <h3 className="caption__heading">
@@ -41,11 +32,7 @@ function ControlledCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://via.placeholder.com/468x60?text=Visit+Blogging.com+No"
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={img2} alt="Second slide" />
 
         <Carousel.Caption>
           <h3>Third slide label</h3>

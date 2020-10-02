@@ -1,12 +1,7 @@
 import React from "react";
-import logo from "../../../logo.jpg";
 import img1 from "../../../assets/add-files.gif";
-import img2 from "../../../assets/bib.gif";
-import img3 from "../../../assets/Bibliophile.gif";
-import img4 from "../../../assets/data-report.gif";
 
 import { ReactComponent as ReactLogo } from "../../../assets/blob-icon.svg";
-
 
 const data = [
   {

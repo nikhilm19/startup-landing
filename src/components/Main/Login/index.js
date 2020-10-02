@@ -3,6 +3,7 @@ import logo from "../../../logo.jpg";
 import { ReactComponent as Fb } from "../../../assets/social-media/facebook.svg";
 
 import { ReactComponent as Google } from "../../../assets/social-media/google.svg";
+import siteMeta from "../../../site-meta";
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -104,7 +105,7 @@ class Login extends React.Component {
               width="50px"
               height="50px"
             />
-            <h1 className="brand-details__name"> Xyz</h1>
+            <h1 className="brand-details__name"> {siteMeta.siteName}</h1>
           </div>
           <div className="form-media-container">
             <div className="form-media__content"></div>

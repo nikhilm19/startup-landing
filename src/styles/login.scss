@@ -1,271 +1,259 @@
 @import "./mixins";
 @import "./variables";
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 .login-form {
+  @include flex-col;
+  @include flex-center;
+  width: 100%;
+  height: 100vh;
+
+  .form-left-container {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .form-right-container {
+    display: none;
+  }
+
+  .form-heading-container {
     @include flex-col;
     @include flex-center;
-    width: 100%;
-    height: 100vh;
 
-    .form-left-container {
+    div {
+      text-align: center;
+    }
+
+    .form-heading__text {
+      font-family: "Varela Round", sans-serif;
+    }
+  }
+
+  .form-main-container {
+    .input-fields-container {
+      div {
         width: 100%;
-        padding: 5%;
+      }
+
+      label {
+        font-family: "Varela Round", sans-serif;
+        margin-bottom: 0px;
+      }
     }
 
-    .form-right-container {
-        display: none;
+    .pwd-field__content,
+    .email-field__content {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      outline: none;
+      border: 1px solid rgb(182, 182, 182);
+      background-color: rgba(206, 206, 206, 0.308);
+      padding: 7px 10px;
+      font-family: "Rubik";
+
+      &::placeholder {
+        // padding-left: 5px;
+      }
     }
 
-    .form-heading-container {
-        @include flex-col;
-        @include flex-center;
-
-        div {
-            text-align: center;
-        }
-
-        .form-heading__text {
-            font-family: 'Varela Round', sans-serif;
-        }
+    .extra-actions {
+      @include flex-row;
+      justify-content: space-between;
+      font-size: 12px;
+      padding: 0px 5px;
+      margin-bottom: 15px;
     }
 
-    .form-main-container {
-
-
-        .input-fields-container {
-            div {
-                width: 100%;
-            }
-
-            label {
-                font-family: 'Varela Round', sans-serif;
-                margin-bottom: 0px;
-            }
-        }
-
-        .pwd-field__content,
-        .email-field__content {
-            width: 100%;
-            margin-bottom: 10px;
-            border-radius: 20px;
-            outline: none;
-            border: 1px solid rgb(182, 182, 182);
-            background-color: rgba(206, 206, 206, 0.308);
-            padding: 7px 10px;
-            font-family: "Rubik";
-
-            &::placeholder {
-                // padding-left: 5px;
-            }
-        }
-
-        .extra-actions {
-            @include flex-row;
-            justify-content: space-between;
-            font-size: 12px;
-            padding: 0px 5px;
-            margin-bottom: 15px;
-        }
-
-        .forgot-pwd-container a {
-
-            text-decoration-style: none;
-            color: lighten($color: $bg-color, $amount:20%);
-        }
-
-        .login-btn__content {
-            width: 100%;
-            background-color: $btn-color;
-            border: none;
-            color: lighten($btn-txt-color, 30%);
-            font-weight: bold;
-            border-radius: 20px;
-            padding: 8px 0px;
-        }
-
-        .new-signup-container {
-            margin-top: 20px;
-            @include flex-row;
-            @include flex-center;
-            font-size: 12px;
-        }
+    .forgot-pwd-container a {
+      text-decoration-style: none;
+      color: lighten($color: $bg-color, $amount: 20%);
     }
 
-    .social-sign-in-container {
-        @include flex-col;
-        margin-top: 40px;
-
-        .social-sign-in-heading-container {
-            @include flex-center;
-            @include flex-row;
-            text-align: center;
-            font-size: 12px;
-            color: grey;
-
-
-            &:before {
-                height: 1px;
-                background-color: rgba(160, 160, 160, 0.432);
-                width: 30%;
-                content: "";
-                display: block;
-                justify-content: center;
-            }
-
-            &:after {
-                height: 1px;
-                background-color: rgba(160, 160, 160, 0.432);
-                width: 30%;
-                content: "";
-                display: block;
-            }
-
-            p.social-sign-in-heading__content {
-                margin-bottom: 0;
-                padding: 0 10px;
-            }
-        }
-
-        .social-sign-in-actions-container {
-            margin-top: 15px;
-            @include flex-row;
-        }
-
-        .social-sign-in-btns {
-            @include flex-row;
-            width: 100%;
-            @include flex-center;
-            align-items: center;
-
-            button {
-                padding: 5px 5px;
-                background-color: transparent;
-                border: 0.5px solid rgb(182, 182, 182);
-                border-radius: 20px;
-                margin-right: 20px;
-                font-size: 0;
-
-
-
-
-
-                &:hover {
-                    @include box-shadow($smooth-shadow);
-                }
-            }
-
-            svg {
-                width: 25px;
-                height: 25px;
-
-            }
-
-        }
+    .login-btn__content {
+      width: 100%;
+      background-color: $btn-color;
+      border: none;
+      color: lighten($btn-txt-color, 30%);
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 8px 0px;
     }
+
+    .new-signup-container {
+      margin-top: 20px;
+      @include flex-row;
+      @include flex-center;
+      font-size: 12px;
+    }
+  }
+
+  .social-sign-in-container {
+    @include flex-col;
+    margin-top: 40px;
+
+    .social-sign-in-heading-container {
+      @include flex-center;
+      @include flex-row;
+      text-align: center;
+      font-size: 12px;
+      color: grey;
+
+      &:before {
+        height: 1px;
+        background-color: rgba(160, 160, 160, 0.432);
+        width: 30%;
+        content: "";
+        display: block;
+        justify-content: center;
+      }
+
+      &:after {
+        height: 1px;
+        background-color: rgba(160, 160, 160, 0.432);
+        width: 30%;
+        content: "";
+        display: block;
+      }
+
+      p.social-sign-in-heading__content {
+        margin-bottom: 0;
+        padding: 0 10px;
+      }
+    }
+
+    .social-sign-in-actions-container {
+      margin-top: 15px;
+      @include flex-row;
+    }
+
+    .social-sign-in-btns {
+      @include flex-row;
+      width: 100%;
+      @include flex-center;
+      align-items: center;
+
+      button {
+        padding: 5px 5px;
+        background-color: transparent;
+        border: 0.5px solid rgb(182, 182, 182);
+        border-radius: 20px;
+        margin-right: 20px;
+        font-size: 0;
+
+        &:hover {
+          @include box-shadow($smooth-shadow);
+        }
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
 }
 
 @include desktop {
-    .login-form {
+  .login-form {
+    @include flex-row;
+
+    .form-left-container {
+      @include box-shadow($smooth-shadow);
+
+      @include flex-col;
+      @include flex-center;
+      width: 50%;
+      height: 100%;
+    }
+
+    .social-sign-in-container {
+      .social-sign-in-btns {
+        button {
+          color: rgb(78, 78, 78);
+          font-size: 12px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+      }
+    }
+
+    .form-right-container {
+      width: 50%;
+      height: 100%;
+      @include flex-col;
+      background-color: #7a3ccd;
+
+      //   background-image: $bg;
+      .form-media-container {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+      }
+
+      .form-media__content {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/teams.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .brand-details-container {
         @include flex-row;
+        margin-top: 30px;
+        margin-left: 30px;
 
-        .form-left-container {
-            @include box-shadow($smooth-shadow);
-
-            @include flex-col;
-            @include flex-center;
-            width: 50%;
-            height: 100%;
+        // padding: 20px 20px;
+        .brand-details__name {
+          margin-left: 20px;
+          font-size: 30px;
+          color: white;
+          font-family: "Raleway";
         }
+      }
 
-        .social-sign-in-container {
-            .social-sign-in-btns {
-                button {
-                    color: rgb(78, 78, 78);
-                    font-size: 12px;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-            }
-
-            svg {
-                width: 30px;
-                height: 30px;
-                margin-left: 5px;
-            }
-        }
-
-        .form-right-container {
-            width: 50%;
-            height: 100%;
-            @include flex-col;
-            background-color: #7a3ccd;
-
-            //   background-image: $bg;
-            .form-media-container {
-                height: 100%;
-                width: 100%;
-                background-color: transparent;
-            }
-
-            .form-media__content {
-                background-color: transparent;
-                width: 100%;
-                height: 100%;
-                background-image: url("../assets/teams.png");
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .brand-details-container {
-                @include flex-row;
-                margin-top: 30px;
-                margin-left: 30px;
-
-                // padding: 20px 20px;
-                .brand-details__name {
-                    margin-left: 20px;
-                    font-size: 30px;
-                    color: white;
-                    font-family: "Raleway";
-                }
-            }
-
-            .form-caption-container {
-                @include flex-col;
-                @include flex-center;
-                color: $yellow;
-                font-size: 25px;
-                font-family: 'Varela Round', sans-serif;
-                font-weight: bold;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .form-heading-container {
+      .form-caption-container {
+        @include flex-col;
+        @include flex-center;
+        color: $yellow;
+        font-size: 25px;
+        font-family: "Varela Round", sans-serif;
+        font-weight: bold;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  .form-heading-container {
+    margin-bottom: 20px;
+  }
+
+  .form-main-container {
+    width: 60%;
+
+    .input-fields-container {
+      div {
+        width: 100%;
+      }
+
+      label {
+        padding-left: 10px;
+        font-size: 12px;
+        margin-bottom: 0px;
+      }
     }
 
-    .form-main-container {
-        width: 60%;
-
-        .input-fields-container {
-            div {
-                width: 100%;
-            }
-
-            label {
-                padding-left: 10px;
-                font-size: 12px;
-                margin-bottom: 0px;
-            }
-        }
-
-        .extra-actions {
-            color: lighten($color: $bg-color, $amount:10%);
-        }
+    .extra-actions {
+      color: lighten($color: $bg-color, $amount: 10%);
     }
-
-
+  }
 }

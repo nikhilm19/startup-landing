@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../logo.jpg";
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import App from "../App";
 import {
   Navbar,
@@ -11,8 +12,13 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-function Header() {
+function Header(props) {
+  console.log(props);
+  const history = useHistory();
+  console.log(history);
+
   const [isSticky, setSticky] = React.useState("initial");
+  const [isHome, setHome] = React.useState("home");
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -25,7 +31,7 @@ function Header() {
   const show = isCollapsed ? "show" : "";
   return (
     <>
-      <nav className={`top-nav top-nav--${isSticky}`}>
+      <nav className={`top-nav top-nav--${isSticky} top-nav--${isHome}`}>
         <div className="top-nav__navbar">
           <img src={logo} width="50px" height="50px"></img>
           <button
@@ -51,7 +57,12 @@ function Header() {
             <li className="nav-menu__list-item">Contact</li>
           </ul>
         </div>
-        <button className="get-started-btn">Get Started</button>
+        <button
+          className="get-started-btn"
+          onClick={() => history.push("/login")}
+        >
+          Get Started
+        </button>
       </nav>
     </>
   );
