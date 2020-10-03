@@ -44,6 +44,7 @@
   opacity: 0;
   visibility: hidden;
   height: 0;
+  width: 0;
   overflow: hidden;
 }
 
@@ -92,10 +93,10 @@ li.nav-menu__list-item {
   font-family: "Rubik";
   a {
     text-decoration-style: none;
-    color: $white;
+    color: $btn-txt-color;
     &:hover {
       text-decoration: none;
-      color: $white;
+      color: $btn-txt-color;
     }
   }
 }
@@ -109,6 +110,10 @@ button.nav-menu__toggle {
   height: 80%;
   cursor: pointer;
   outline: inherit;
+
+  &.nav-menu__toggle--sticky {
+    color: $black;
+  }
 }
 
 .get-started-btn {
@@ -127,16 +132,6 @@ button.nav-menu__toggle {
     flex-direction: row;
     justify-content: initial;
     padding: 0 20%;
-  }
-
-  .top-nav--sticky {
-    li.nav-menu__list-item,
-    a {
-      color: $btn-hover-color;
-      &:hover {
-        color: $btn-hover-color;
-      }
-    }
   }
 
   .top-nav__navbar {
@@ -193,10 +188,36 @@ button.nav-menu__toggle {
         width: 40px;
       }
     }
+    a {
+      text-decoration-style: none;
+      color: $white;
+      &:hover {
+        text-decoration: none;
+        color: $btn-txt-color;
+      }
+    }
   }
 
-  .nav-menu__toggle {
+  .top-nav--sticky {
+    li.nav-menu__list-item {
+      color: $btn-hover-color;
+      a {
+        color: $btn-hover-color;
+        &:hover {
+          color: $btn-hover-color;
+        }
+      }
+    }
+    a {
+    }
+  }
+
+  button.nav-menu__toggle {
     display: none;
+
+    &.nav-menu__toggle--sticky {
+      color: $black;
+    }
   }
 
   .get-started-btn {

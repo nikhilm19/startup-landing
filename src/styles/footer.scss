@@ -10,6 +10,7 @@
   flex-direction: column;
   background: $bg-color;
   color: white;
+  // padding: 30px 0;
 }
 .footer::before {
   content: " ";
@@ -68,7 +69,7 @@ div.newsletter-container {
 }
 div.social-media-container i {
   margin-bottom: 20px;
-  color: lighten($btn-color,50%);
+  color: lighten($btn-color, 50%);
 }
 
 .newsletter-email {

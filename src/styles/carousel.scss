@@ -25,17 +25,14 @@
 
 .carousel-caption {
   display: flex;
-  position: absolute;
 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 0;
-
-  top: 0;
-  width: 80%;
-  margin: 0 10%;
+  // width: 100%;
+  // margin: 0 10%;
   text-align: left;
+  height: 100%;
 }
 
 .carousel-control-next,

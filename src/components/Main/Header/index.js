@@ -2,15 +2,7 @@ import React from "react";
 import logo from "../../../logo.jpg";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import App from "../App";
-import {
-  Navbar,
-  Nav,
-  Form,
-  Button,
-  FormControl,
-  NavDropdown,
-} from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 function Header(props) {
   console.log(props);
@@ -22,7 +14,7 @@ function Header(props) {
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      const sticky = window.scrollY < 160 ? "initial" : "sticky";
+      const sticky = window.scrollY < 10 ? "initial" : "sticky";
 
       setSticky(sticky);
     });
@@ -35,7 +27,7 @@ function Header(props) {
         <div className="top-nav__navbar">
           <img src={logo} width="50px" height="50px"></img>
           <button
-            className="nav-menu__toggle"
+            className={`nav-menu__toggle nav-menu__toggle--${isSticky}`}
             onClick={() => setCollapse(!isCollapsed)}
           >
             <i class="fa fa-bars"></i>

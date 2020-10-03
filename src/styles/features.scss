@@ -2,8 +2,9 @@
   background-image: url("../assets/blob-bg.svg"), url("../assets/blob-bg-2.svg"),
     url("../assets/blob-3.svg"), url("../assets/blob-3.svg"),
     url("../assets/blob-bg-2.svg");
-  background-position: right bottom, 1% 1%, 1% 300px, right top, right 300px;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 1% 10%, right 60%, right 71%, right 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
   background-size: 50% 50%, 300px 300px, 300px 300px, 300px 300px, 300px 300px;
   display: flex;
   width: 100%;
@@ -82,6 +83,9 @@
 }
 
 @media only screen and (min-width: 650px) {
+  .features {
+    background-position: right bottom, 1% 1%, 1% 300px, right top, right 300px;
+  }
   .features-heading {
     margin-bottom: 50px;
   }

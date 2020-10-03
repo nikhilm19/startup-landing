@@ -48,7 +48,7 @@ function Services() {
       <VisibilitySensor
         partialVisibility
         onChange={(isVisible) => {
-          onChange(isVisible, "services", "fadeInLeft");
+          // onChange(isVisible, "services", "fadeInLeft");
         }}
       >
         <section className="services" id="services">
