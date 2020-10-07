@@ -7,15 +7,14 @@ import AboutUs from "./About-us";
 import Landing from "./Landing";
 import Layout from "./Layout";
 import Login from "./Login";
-import Switch from "react-bootstrap/esm/Switch";
+import { pages } from "../../constants/Routes";
 
 function App() {
   return (
     <Router>
-      <Route path="/" exact component={Landing}></Route>
-      <Route path="/about" exact component={AboutUs}></Route>
-
-      <Route path="/login" exact component={Login}></Route>
+      {pages.map((page) => {
+        return <Route path={page.path} component={page.component}></Route>;
+      })}
     </Router>
   );
 }

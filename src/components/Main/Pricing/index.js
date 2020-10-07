@@ -14,19 +14,19 @@ const data = [
     img: img1,
     title: "Batch a",
     nos: "16",
-    caption: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+    caption: "Vexillologist pitchfork",
   },
   {
     img: img2,
     title: "Batch b",
     nos: "32",
-    caption: "Lorem Ipsum ",
+    caption: "Tumeric plaid portland ",
   },
   {
     img: img3,
     title: "Batch c",
     nos: "64",
-    caption: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+    caption: "Hexagon neutra unicorn",
   },
 ];
 
@@ -55,7 +55,13 @@ function Pricing() {
                     onChange(isVisible);
                   }}
                 >
-                  <div className={`price-card-container fadeinDown-${i}`}>
+                  <div
+                    className={
+                      i !== 2
+                        ? `price-card-container fadeinDown-${i}`
+                        : `price-card-container fadeinDown-${i} featured`
+                    }
+                  >
                     {i === data.length - 1 ? (
                       <span className="advanced-ribbon">Advanced</span>
                     ) : (
@@ -64,6 +70,7 @@ function Pricing() {
                     <div className="price-title-container">
                       <h5 className="price-title__content">{card.title}</h5>
                     </div>
+                    <span className="card-underline" />
                     {/* <div className="price-card-media">
                       <ReactLogo className="service-media__img" />
                       <i className="fa fa-calculator fa-2x"></i>
@@ -75,7 +82,7 @@ function Pricing() {
                             <span className="price-labors__nos price-labors__nos--span ">
                               {card.nos}
                             </span>
-                            Nos
+                            / Nos
                           </h3>
                         </div>
                       </div>
