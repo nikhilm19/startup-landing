@@ -4,11 +4,9 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import { Link } from "react-router-dom";
+import GetStarted from "../../Reusable/Btns/GetStarted";
 function Header(props) {
-  console.log(props);
   const history = useHistory();
-  console.log(history);
-
   const [isSticky, setSticky] = React.useState("initial");
   const [isHome, setHome] = React.useState("home");
 
@@ -49,12 +47,7 @@ function Header(props) {
             <li className="nav-menu__list-item">Contact</li>
           </ul>
         </div>
-        <button
-          className="get-started-btn"
-          onClick={() => history.push("/login")}
-        >
-          Get Started
-        </button>
+        <GetStarted area="nav" />
       </nav>
     </>
   );

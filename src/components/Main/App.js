@@ -13,7 +13,14 @@ function App() {
   return (
     <Router>
       {pages.map((page) => {
-        return <Route path={page.path} component={page.component}></Route>;
+        return (
+          <Route
+            exact
+            path={page.path}
+            component={page.component}
+         
+          ></Route>
+        );
       })}
     </Router>
   );

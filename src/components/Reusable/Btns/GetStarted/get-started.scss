@@ -1,0 +1,34 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.get-started-btn {
+  &.get-started-btn--nav {
+    display: none;
+  }
+  @include flex-row;
+  @include flex-center;
+  background-color: $btn-color;
+  border: none;
+  outline: none;
+  color: $btn-txt-color;
+  width: 150px;
+  border-radius: 30px;
+  padding: 10px 20px;
+
+  transition: all 0.2s ease-in;
+
+  @include desktop() {
+    &.get-started-btn--nav {
+      @include flex-row;
+      width: 200px;
+    }
+
+    height: 50px;
+    width: 200px;
+
+    &:hover {
+      background-color: $btn-hover-color;
+      color: $white;
+    }
+  }
+}

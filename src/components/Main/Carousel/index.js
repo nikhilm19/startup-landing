@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 
 import img2 from "../../../assets/gradient-bg.jpg";
-function ControlledCarousel() {
+import GetStarted from "../../Reusable/Btns/GetStarted";
+function ControlledCarousel(props) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -17,7 +18,7 @@ function ControlledCarousel() {
           <h3 className="caption__heading">
             Welcome to <span className="caption__keyword">XYZ</span>
           </h3>
-          <button className="caption__cta">Get Started</button>
+          <GetStarted />
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -28,7 +29,7 @@ function ControlledCarousel() {
             One stop shop for{" "}
             <span className="caption__keyword">Lorem Ipsum</span>
           </h3>
-          <button className="caption__cta">Get Started</button>
+          <GetStarted />
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
